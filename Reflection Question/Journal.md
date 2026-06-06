@@ -4,8 +4,9 @@ NAME: ABDULRAHMAN YUSUF OPEYEMI
 ### CLASS  01:---- The 2026 Web Ecosystem
 ## Theory
  1. Browser Rendering: HTML → Screen
+      When a browser receives the HTML, firstly before it turns to what what we see on the screen it takes html and create a DOM tree which contains the elements on the page foe example the "head" "body" and the body contains the divs, the <p>  then it this DOM (elements on the page) and joins it with the CSS to create a RENDER TREE. The RENDER TREE is what determines how the element will look example like the colors, fonts, sizes,after that the layout help to calculate the size and dimensions of every element to help the element fits or display properly on the screen and finally the PAINT STAGE converts the calculations into drawings, images text, on the display screen
 
-
+       view the  Asset  folder for the drawing .
 
 
 
@@ -16,7 +17,6 @@ NAME: ABDULRAHMAN YUSUF OPEYEMI
         Smarter congestion control: it adapt quickly to changing network conditions also the connection migration that keeps session alive when switching network
 
  3. Website without semantic HTML
-
 
 
 
