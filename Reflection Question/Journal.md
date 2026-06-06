@@ -59,7 +59,7 @@ NAME: ABDULRAHMAN YUSUF OPEYEMI
    while fix HTML is used when there is wrong tag and could be change to the right sementic tag 
 
 ## ACCESSIBILITY REFLECTION
-   I. Using GTB bank as a case study  
+   I. Using GTB bank as a case study 
 
 
 ## PRODUCT THINKING
@@ -170,3 +170,70 @@ _____________________________
 
 2. The align-items make a flex items expand to fill across axis usually height   It wont work if the items already have fixed height
     <div style="display: flex; align-items: </div> 
+
+## ENGINEERING THINKING
+1. the solution to this question is the class 06 html  and css file in my cosing folder 
+explanation on how in did it 
+after creating my pure html in my htlm i created a parent div that carries all the navbar items, then iside the main div there are sub divs that contains logo, navitens, and the button. then moving to the styling, i gave the main div a flex and also  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+2. 
+
+
+## CLASS 07-----CSS Grid & Layout Complexity
+## THEORY
+1. Css grid is been used for two or more axis layout while flexbox is use for one direction or axis layout,
+   css grid is best used when rows and columns matter   scenarios where css grid is been used 1. a clothing brond image galleries where there were arrange in both rows and columns and they both needs equal spacing 2. A magazines and newspaper with two or more article on 2 or more coulumns 3. dashboard layout 
+2. grid-template-area is used to name the part of the layout and arrange them like a visual map, it be name and describe usinng words
+    like header, main, sidebar and footer
+##  Engineering Thinking
+ 1. 
+
+ 2. 
+
+
+
+ ## CLASSS 08-------Tailwind CSS Fundamentals
+ ## THEORY 
+  1. The utility-first means using small classes margin(m-t) padding (p-5) bagroundcolor(bg-blue) instead of the semantic
+     component or element the utility-first philosophy is used because of it speed and flexibility
+  2. The JIT(just-in-time) Compiler in tailwind is just a system whereby the tailwind/css only generates the css the web 
+     need or actually use inwhich these leads to a huge reduction in the size of the file and also makes it faster
+   ##  Product Thinking
+    1. when we use tailwind css it doesnt make the html ugly rather it more readability it reduces the stress of moving into
+       seperates file for the css and also track or style easily 
+     II. also maintainability tailwind make more reusable, III. tailwind also the consistency tailwind makes youn use spacing like p-2, p-6,p-8 instead of random 17px, 22px and so on   also for the III. perrforrmance, tailwind gives you speed and also with the JIT only the classses you need are use which reduce the size of the html.
+
+
+
+## Class 09---- Advanced Tailwind & Responsive Design
+##  Theory
+  1. The md: prefix in Tailwind CSS is used to apply styles at the medium breakpoint. For example, md:text-base will apply the 
+     text size to medium screens and larger. The md: prefix is part of Tailwind's mobile-first approach. To use the custom breakpoint
+       we go to tailwind.config.js and add the custom size before we can use in  our htlm
+  2. Arbitery values are use when we have already defined scale and you wan to use somthing else or specific one while extending the 
+     config is use when the value been set will be reuse across the project
+ ## Engineering Best Practice
+   1. 
+
+
+
+## Class 10----- Memory & Variables
+##  Theory
+ 1.  In terms of scope 'var' is visible throughout the function where its declered while let and const are only exist inside the nearest block
+     In terms of hoisting 'var' can be reference bedore its decleration while let and const cant bereferenced until they are declared
+     In terms of Reassignment var and let can be reassigned freely but const cant be reassigne.
+ 2. The TDZ is use to prevent bugs its a period between when a block scope starts and when a let or const variable is declared. 
+     During this time, the variable exists but cannot be accessed—any attempt throws a ReferenceError.
+ 3.  
+
+
+ ##  Product Thinking
+ 1. For the display i would use "let" because whenever the user type the numbers and the are numbers are shown for that to happen thst 
+     meeans the numbers are reassigned frequently    
+     while for the operator that is the add, subtract, divide, and multiplication "let" is also used for this
+     while for the previous operand since the display value change whenever new calculation start that means "let" must be used for the reassignment.
+
+## Class 11------ Control Flow & Comparison
+## THEORY
