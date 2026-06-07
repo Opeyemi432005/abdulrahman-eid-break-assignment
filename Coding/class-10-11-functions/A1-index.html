@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-zinc-950 text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .display { font-family: 'Courier New', monospace; }
+        .btn { transition: all 0.1s ease; }
+        .btn:active { transform: scale(0.95); }
+    </style>
+</head>
+<body class="h-full flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-zinc-700">
+        
+        <!-- Header -->
+        <div class="px-6 py-4 bg-zinc-950 flex items-center justify-between">
+            <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-calculator text-blue-500"></i>
+                <span class="font-semibold tracking-widest">CALCULATOR</span>
+            </div>
+            <button onclick="clearAll()" 
+                    class="text-xs px-4 py-2 bg-zinc-800 hover:bg-zinc-700 rounded-2xl font-mono">
+                AC
+            </button>
+        </div>
+
+        <!-- Display -->
+        <div class="bg-zinc-950 px-8 py-10 border-b border-zinc-700">
+            <div id="expression" class="text-zinc-400 text-right min-h-[1.5rem] text-sm font-light"></div>
+            <div id="display" 
+                 class="display text-right text-5xl font-semibold min-h-[3.5rem] flex items-center justify-end">
+                0
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-4 gap-2 p-6 bg-zinc-900">
+            <button onclick="handleScientific('sqrt')" class="btn col-span-1 bg-zinc-800 hover:bg-zinc-700 text-emerald-400 font-semibold py-6 rounded-2xl">√</button>
+            <button onclick="handleScientific('pow')" class="btn col-span-1 bg-zinc-800 hover:bg-zinc-700 text-emerald-400 font-semibold py-6 rounded-2xl">xʸ</button>
+            <button onclick="handleScientific('fact')" class="btn col-span-1 bg-zinc-800 hover:bg-zinc-700 text-emerald-400 font-semibold py-6 rounded-2xl">n!</button>
+            <button onclick="clearEntry()" class="btn bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 font-semibold py-6 rounded-2xl">CE</button>
+
+            <button onclick="inputNumber('7')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">7</button>
+            <button onclick="inputNumber('8')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">8</button>
+            <button onclick="inputNumber('9')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">9</button>
+            <button onclick="inputOperator('/')" class="btn bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 font-semibold py-6 rounded-2xl text-3xl">÷</button>
+
+            <button onclick="inputNumber('4')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">4</button>
+            <button onclick="inputNumber('5')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">5</button>
+            <button onclick="inputNumber('6')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">6</button>
+            <button onclick="inputOperator('*')" class="btn bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 font-semibold py-6 rounded-2xl text-3xl">×</button>
+
+            <button onclick="inputNumber('1')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">1</button>
+            <button onclick="inputNumber('2')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">2</button>
+            <button onclick="inputNumber('3')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">3</button>
+            <button onclick="inputOperator('-')" class="btn bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 font-semibold py-6 rounded-2xl text-3xl">−</button>
+
+            <button onclick="inputNumber('0')" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl col-span-2">0</button>
+            <button onclick="inputDecimal()" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-3xl">.</button>
+            <button onclick="inputOperator('+')" class="btn bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 font-semibold py-6 rounded-2xl text-3xl">+</button>
+
+            <button onclick="calculateResult()" 
+                    class="btn col-span-2 bg-blue-600 hover:bg-blue-700 py-6 rounded-3xl text-3xl font-semibold">＝</button>
+            <button onclick="toggleSign()" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-xl">±</button>
+            <button onclick="backspace()" class="btn bg-zinc-800 hover:bg-zinc-700 py-6 rounded-2xl text-2xl">⌫</button>
+        </div>
+    </div>
+    <script src="A1-script.js" > </script>
+       
+   
+</body>
+</html>

@@ -237,3 +237,116 @@ after creating my pure html in my htlm i created a parent div that carries all t
 
 ## Class 11------ Control Flow & Comparison
 ## THEORY
+  1. The === is a strict equality and it is the most recommended one it checks if the value and the type are the same 
+  while the == is loose equality it convert the value to the data type before comparing 
+
+
+  2. optional chaining is a javsascipt operator that makes it safer to access nested properties or call functions on objects that might be null or undefined, instead of crashing it returns undefined. it prevent error when 
+   I. Accessing nested object properties
+      let user = {
+        name: "Yusuf"
+      } 
+      console.log (user.address); -----  this shows error 
+      but when you use the optional chaining for example: let  console.log(user.address?);---- this will show undefined.
+
+  3. the nullish coalescing operato ?? is used to or usually gives default value only when the left-hand side is null or undefined
+      while the || operator that treat any false value (0, " ", false ) as atrigger to use the right-hand side 
+
+## Class 12----- Functions & Functional Programming
+## THEORY
+1. A function declaration is mean the function has been fully defined and it is fully hoisted  While function expression is not fully 
+    defined it is undefined utill it is assigned .
+2. A pure function is function that produces the same number of output for the same input in the process of that it doesnt cause any change 
+   to the other variable the developers value them because of I.predictability: they are easier to reason II.debugging: they have no hidden behavior and also the III.Reusability: they can be reuse in different contexts example of a non pure function is below;
+   let count = 0;
+   function increment() {
+   count++;
+   return count;
+ }
+3. A callback is a function that is pass into another function for it to executed later for example i place an order and i dont know when it 
+  will arrive then i put a callback that when it arrives it should the dispatch should knock the gate.  While A higher-order function is a function that returns a function when another function is declered.
+
+  ##  Product Thinking
+    1. 
+
+
+
+
+
+  ## Class 13----- Data Structures — Arrays & Objects
+  ## THEORY
+  1. An array will be used when we need an ordered arrangement of items especially when we will be needing or accessing the items by 
+    their position, arrays are for list   
+    While an object is use to store key value data and each data is while accessing them by the label. Example where an object is better is below 
+    let student = {
+    name: "Yusuf",
+    age: 20,
+  };
+2. destructuring with nested objects allow one to pull values out of complex structures into variables it is usually usally useful when working   
+   with API responses
+  An API RESPONSE ---- const apiResponse = {
+                              location: {
+                              city: "Lagos",
+                              country: "Nigeria"
+                           },
+   DESTRUCTURING NESTED VALUE-------const {
+                                       location: { city, country }, 
+        INSTEAD OF WRITING ----- const city = apiResponse.location.city;
+
+## Class 14----- DOM Manipulation & Events
+## THEORY
+1. Event Bubbling is when the event bubbles up from lowest element to  the  highest element  example there is a click button inside a div and the  
+    button is click the click event  bubbles up and runs on the <button> then to the <div> from the <div> then to the  <body>  
+                         
+    while event capturing is the opposite of event bubbling when the click button is click the event capturing enable from the <body> then to the<div> and then to the button finally.
+2. Event delegation is a technique where we attach a single event listener to a parent element instead of adding listeners to each child 
+   <ul id="menu">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+  </ul> instead of adding eventlisteners to all the list items we can add the event listener to the parent elment 
+ --- document.getElementById("menu").addEventListener("click", function(e) {
+  if (e.target.tagName === "LI") {
+    console.log("You clicked:", e.target.textContent);
+  }
+});
+
+3. innerHTML is not advisable to use because if user use innerHTML it directly intrprete the whole html so if the htlm contains some malicious 
+  code it can result to some bugs while createElement and textContent is better it will never run the whole script it will just display the text they both treat it as plain 
+ ## Class 15---- Personal Dashboard Project
+ ## THEORY
+ 1. the hardest part was actually knowing what you want to do and how to execute it 
+
+ 2. whenever i get stuck i usually mke use of google and Ai it best because i think it is faster for me to get help 
+
+ 3. 
+
+ 4. 
+
+## Class 16----- The Event Loop & Promises
+## THEORY
+1. The javasript loop is what makes setTimeout , fetch and promise work without making the page freeze or lag 
+   I. The call stack is where function are exucuted the functions are executed one at a time 
+   II. Task Queue are the setTimeout, and setInterval the function wait till the cal stack if free or empty 
+   III. Microtask Queue will be executed only when the task queue is completly empty    
+   WHY this matters for async code is that it create order of execution 
+ 2. In microtask the the higher priority task runs immediately after the current call stack clears before any other macrotask 
+     while in macrotask the lower priority task scheduled for the next event loop. The promise.resolve().then() runs before setTimeout because the promise.resolve().then() are macrotasks and they run before the event moves on to macrotasks.
+
+  3. Execution Order
+      console.log('1') → runs immediately (call stack).
+      console.log('4') → also runs immediately (call stack).
+      console.log('3') → runs next, because promises go into the microtask queue, which is drained before macrotasks.
+      console.log('2') → runs last, because setTimeout goes into the macrotask queue.
+      FINAL OUTPUT 
+      1
+      4
+      3
+      2
+## Class 17----- Async/Await & Fetch API
+## THEORY
+1. Async/await is JavaScript’s way of writing asynchronous code that looks and feels like synchronous code.
+   Async functions: Declared with async, they always return a promise.
+   Await: Pauses execution inside an async function until the promise resolves, then continues with the resolved value.
+2. We use try/catch with async/await when we need to deal with error inside async function. if the await pauses the execution until
+  a promise settles, and the promie reject the error will be thrown but we dont use it the rejectted promise will bubble and will show console error in the browser
